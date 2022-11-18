@@ -1,5 +1,5 @@
 import random
-from datetime import datetime, date
+from datetime import datetime
 
 #Creación de clases
 
@@ -70,3 +70,4 @@ class Hospital:
             print(f"El doctor {doctor.nombre} {doctor.apellidos} ha fichado a las {hora.hour}:{hora.minute}")
         elif enfermero != None:
             print(f"El enfermero {enfermero.nombre} {enfermero.apellidos} ha fichado a las {hora.hour}:{hora.minute}")
+
