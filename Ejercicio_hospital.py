@@ -25,7 +25,7 @@ paciente4 = clases.Pacientes(random.choice(list(enfermedades)), "Carmen", "Sanch
 #Sala de espera con pacientes
 sala_espera = [paciente1, paciente2, paciente3, paciente4]
 
-#Atendiendo a los pacientes de la sala de espera (En construcción)
+#Atendiendo a los pacientes de la sala de espera
 while len(sala_espera) > 0:
     for enfermero in enfermeros:
         enfermero.atiendePaciente(sala_espera)
