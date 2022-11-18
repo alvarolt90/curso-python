@@ -1,4 +1,5 @@
 import random
+from datetime import datetime, date
 
 #Creación de clases
 
@@ -64,7 +65,8 @@ class Hospital:
 
     #Método para que los doctores y los enfermeros fichen
     def fichar(self, doctor=None, enfermero=None):
+        hora = datetime.now()
         if doctor != None:
-            print(f"El doctor {doctor.nombre} {doctor.apellidos} ha fichado")
+            print(f"El doctor {doctor.nombre} {doctor.apellidos} ha fichado a las {hora.hour}:{hora.minute}")
         elif enfermero != None:
-            print(f"El enfermero {enfermero.nombre} {enfermero.apellidos}ha fichado")
+            print(f"El enfermero {enfermero.nombre} {enfermero.apellidos} ha fichado a las {hora.hour}:{hora.minute}")
