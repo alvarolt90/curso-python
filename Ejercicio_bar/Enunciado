@@ -1,0 +1,24 @@
+
+ENUNCIADO DEL EJERCICIO
+
+TemperatureException --> Exception
+TooHotTemperature --> TemperatureException
+TooColdTemperature --> TemperatureException
+
+TazaCafe
+    temperature
+    tipo_cafe
+
+Cliente
+    nombre
+    tomarTazaCafe(TazaCafe)
+        >80 "El cliente se quema"
+        <20 "El cafe está frio"
+
+Camarero
+    nombre
+    servirTazaCafe() --> crear el objeto TazaCafe, temperaturaAleatoria (0-100)
+
+Bar
+    camarero --> servirTazaCafe
+    cliente --> tomarTazaCafe
