@@ -10,4 +10,5 @@ bar = clases.Bar(cliente1, camarero)
 
 #Atendiendo a los clientes
 
-camarero.servirTazaCafe(cliente1)
+if __name__ == '__main__':
+    camarero.servirTazaCafe(cliente1)
