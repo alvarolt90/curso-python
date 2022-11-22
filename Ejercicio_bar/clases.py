@@ -12,7 +12,7 @@ class Cliente:
     def __init__(self, nombre):
         self.nombre = nombre
 
-    def tomarTazaCafe(TazaCafe):
+    def tomarTazaCafe(self, TazaCafe):
         try:
             if TazaCafe > 80:
                 raise excepciones.TooHotTemperature("El café está ardiendo y el cliente se ha quemado la lengua")

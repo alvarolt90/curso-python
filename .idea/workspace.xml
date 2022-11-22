@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d60f7872-5f84-422b-b9d0-722436287ac5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Ejercicio_bar/excepciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio_bar/excepciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio_bar/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio_bar/clases.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
