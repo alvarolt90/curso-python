@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d60f7872-5f84-422b-b9d0-722436287ac5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Ejercicio_instrumentos/Enunciado" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicio_instrumentos/clases.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicio_instrumentos/excepciones.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicio_instrumentos/logging_instrumentos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loggin.py" beforeDir="false" afterPath="$PROJECT_DIR$/loggin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio_instrumentos/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio_instrumentos/clases.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

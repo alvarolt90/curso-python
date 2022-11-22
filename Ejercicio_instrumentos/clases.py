@@ -1,6 +1,7 @@
 import random
 import excepciones
 import logging as log
+from abc import ABC, abstractmethod
 
 #Desactivando log.info o superior
 log.basicConfig(level=log.WARNING)
@@ -22,7 +23,7 @@ def dec_tocar_instrumentos(tocar):
     return tocando
 
 #Creación de clases
-class Instrumento:
+class Instrumento(ABC):
     def __init__(self, nombre, tipo):
         self.nombre = nombre
         self.tipo = tipo
@@ -70,10 +71,11 @@ class Orquesta:
 
     #Método para crear la orquesta
     def crearOrquesta(self):
-        guitarra = Guitarra(7, "Guitarra", "Cuerda")
-        guitarra_electrica = Guitarra_Electrica("10W", 7, "Guitarra Eléctrica", "Cuerda")
-        piano = Piano(44, "Piano", "Cuerda percutida")
-        tambor = Tambor("24 cm", "Tambor", "Percusión")
+        if __name__ == "__main__":
+            guitarra = Guitarra(7, "Guitarra", "Cuerda")
+            guitarra_electrica = Guitarra_Electrica("10W", 7, "Guitarra Eléctrica", "Cuerda")
+            piano = Piano(44, "Piano", "Cuerda percutida")
+            tambor = Tambor("24 cm", "Tambor", "Percusión")
         #Lista de instrumentos
         instrumentos = [guitarra, guitarra_electrica, piano, tambor]
 
