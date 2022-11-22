@@ -8,6 +8,6 @@ import logging as log
 #ERROR
 #CRITICAL
 
-log.basicConfig(level=log.DEBUG)
+log.basicConfig(level=log.WARNING)
 
 log.debug("Esto es un log de prueba")
