@@ -25,7 +25,8 @@ class Camarero:
     def __init__(self, nombre):
         self.nombre = nombre
 
-    def servirTazaCafe(self):
+    def servirTazaCafe(self, cliente):
+        self.cliente = cliente
         try:
             temperature = random.randint(0, 100)
             tipo_cafe = input("¿Que tipo de café desea tomar?")

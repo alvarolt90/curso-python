@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d60f7872-5f84-422b-b9d0-722436287ac5" name="Changes" comment="" />
+    <list default="true" id="d60f7872-5f84-422b-b9d0-722436287ac5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Ejercicio_bar/clases.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio_bar/clases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicio_bar/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicio_bar/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
