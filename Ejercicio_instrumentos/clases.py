@@ -1,7 +1,7 @@
 import random
 import excepciones
 import logging as log
-from abc import ABC, abstractmethod
+from abc import ABC
 
 #Desactivando log.info o superior
 log.basicConfig(level=log.WARNING)
