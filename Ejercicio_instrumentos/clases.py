@@ -87,3 +87,5 @@ class Orquesta:
 #Creacion de la orquesta
 if __name__ == "__main__":
     orquesta = Orquesta("Orquesta Melodias")
+    orquesta.crearOrquesta()
+    orquesta.iniciarConcierto()
