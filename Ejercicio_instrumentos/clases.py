@@ -9,17 +9,17 @@ log.basicConfig(level=log.DEBUG)
 #Decorador para afinar los instrumentos
 def dec_afinar_instrumentos(afinar):
     def afinando():
-        log.debug("Se empieza a afinar el instrumento")
+        log.info("Se empieza a afinar el instrumento")
         afinar()
-        log.debug("Se ha terminado de afinar el instrumento")
+        log.info("Se ha terminado de afinar el instrumento")
     return afinando
 
 #Decorador para tocar los instrumentos
 def dec_tocar_instrumentos(tocar):
     def tocando():
-        log.debug("Se empieza a tocar el instrumento")
+        log.info("Se empieza a tocar el instrumento")
         tocar()
-        log.debug("Se ha terminado de tocar el instrumento")
+        log.info("Se ha terminado de tocar el instrumento")
     return tocando
 
 #Creación de clases
