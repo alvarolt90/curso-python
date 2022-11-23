@@ -1,0 +1,1 @@
+['Colegio1', 'Nombre11', 'Apellidos11', '1111K', 'Matemáticas;Química']|
