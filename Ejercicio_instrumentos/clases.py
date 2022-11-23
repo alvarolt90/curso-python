@@ -14,7 +14,7 @@ def dec_afinar_instrumentos(afinar):
         log.warning("Se ha terminado de afinar el instrumento")
     return afinando
 
-#Decorador para afinar los instrumentos
+#Decorador para tocar los instrumentos
 def dec_tocar_instrumentos(tocar):
     def tocando():
         log.warning("Se empieza a tocar el instrumento")
@@ -66,21 +66,24 @@ class Tambor(Instrumento):
         print(f"Aporreando el tambor {self.nombre}")
 
 class Orquesta:
-    def __init__(self, instrumento):
-        self.instrumento = instrumento
+    def __init__(self, nombre):
+        self.nombre = nombre
 
     #Método para crear la orquesta
     def crearOrquesta(self):
-        if __name__ == "__main__":
             guitarra = Guitarra(7, "Guitarra", "Cuerda")
             guitarra_electrica = Guitarra_Electrica("10W", 7, "Guitarra Eléctrica", "Cuerda")
             piano = Piano(44, "Piano", "Cuerda percutida")
             tambor = Tambor("24 cm", "Tambor", "Percusión")
-        #Lista de instrumentos
-        instrumentos = [guitarra, guitarra_electrica, piano, tambor]
+            #Lista de instrumentos
+            instrumentos = [guitarra, guitarra_electrica, piano, tambor]
 
     #Método para iniciar el concierto
     def iniciarConcierto(self):
         for instrumento in self.instrumentos:
             instrumento.afinar()
             instrumento.tocar()
+
+#Creacion de la orquesta
+if __name__ == "__main__":
+    orquesta = Orquesta("Orquesta Melodias")
