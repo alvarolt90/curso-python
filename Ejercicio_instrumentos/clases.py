@@ -4,22 +4,22 @@ import logging as log
 from abc import ABC
 
 #Desactivando log.info o superior
-log.basicConfig(level=log.WARNING)
+log.basicConfig(level=log.DEBUG)
 
 #Decorador para afinar los instrumentos
 def dec_afinar_instrumentos(afinar):
     def afinando():
-        log.warning("Se empieza a afinar el instrumento")
+        log.debug("Se empieza a afinar el instrumento")
         afinar()
-        log.warning("Se ha terminado de afinar el instrumento")
+        log.debug("Se ha terminado de afinar el instrumento")
     return afinando
 
 #Decorador para tocar los instrumentos
 def dec_tocar_instrumentos(tocar):
     def tocando():
-        log.warning("Se empieza a tocar el instrumento")
+        log.debug("Se empieza a tocar el instrumento")
         tocar()
-        log.warning("Se ha terminado de tocar el instrumento")
+        log.debug("Se ha terminado de tocar el instrumento")
     return tocando
 
 #Creación de clases
@@ -76,7 +76,7 @@ class Orquesta:
             piano = Piano(44, "Piano", "Cuerda percutida")
             tambor = Tambor("24 cm", "Tambor", "Percusión")
             #Lista de instrumentos
-            instrumentos = [guitarra, guitarra_electrica, piano, tambor]
+            self.instrumentos = [guitarra, guitarra_electrica, piano, tambor]
 
     #Método para iniciar el concierto
     def iniciarConcierto(self):
