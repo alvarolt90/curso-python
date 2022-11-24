@@ -6,24 +6,22 @@ try:
         with conexion.cursor() as cursor:
             #Muestro los nombres de todas las personas
             sentencia = "SELECT nombre FROM personas"
-            nombres = (tuple(sentencia.split(',')))
-            cursor.execute(sentencia, nombres)
+            cursor.execute(sentencia)
             registros = cursor.fetchall()
             for registro in registros:
                 print(registro)
 
             # Muestro las personas con email de gmail
-            sentencia = "SELECT * FROM personas WHERE email LIKE '%gmail%'"
-            emails = (tuple(sentencia.split(',')))
-            cursor.execute(sentencia, emails)
+            sentencia = "SELECT * FROM personas WHERE email LIKE '%gmail.com'"
+            cursor.execute(sentencia)
             registros = cursor.fetchall()
             for registro in registros:
                 print(registro)
 
             #Actualizo los email
-            sentencia = 'UPDATE personas SET nombre=%s, apellidos=%s, email=%s'
-            valores = ('')
-            cursor.execute(sentencia, valores)
+            sentencia = "UPDATE personas SET email = CONCAT(left('personas', 'email', locate('@', 'personas', 'email') -1), '%gmail.com')" \ 
+                        "WHERE 'personas', 'email' NOT LIKE '%gmail.com'"
+            cursor.execute(sentencia)
 
             conexion.commit()
 except Exception as e:
