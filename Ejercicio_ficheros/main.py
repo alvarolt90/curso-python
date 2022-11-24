@@ -14,3 +14,10 @@ if __name__ == '__main__':
             #Creando archivos a partir de los objetos
             with open(f'{valor[0]}.txt','w', encoding='utf8') as archivo:
                 archivo.write(f"{valor}|\n")
+
+
+#insertar 3 personas
+#consultas sacando
+    #- los nombres de todas las personas
+    #- todos los datos de las personas que tengan un email terminado en "gmail.com"
+    #- actualizar a las personas que no tengan un email de "gmail.com" y ponerselo

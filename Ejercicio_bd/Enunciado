@@ -1,0 +1,5 @@
+#insertar 3 personas
+#consultas sacando
+    #- los nombres de todas las personas
+    #- todos los datos de las personas que tengan un email terminado en "gmail.com"
+    #- actualizar a las personas que no tengan un email de "gmail.com" y ponerselo
