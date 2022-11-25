@@ -10,7 +10,7 @@ NUM_CARRERAS: 3
 ID
 NOMBRE
 FECHA_NACIMIENTO
-VELOCIDAD (1-50)
+VELOCIDAD (1-100)
 EXPERIENCIA (1-100)
 VALOR_APUESTA (1-10)
 ID_GRANPREMIO
@@ -39,9 +39,9 @@ ID NOMBRE CABALLO - VALORAPUESTA
 -Empieza la carrera
 se tiene que poner a correr a los caballos apuntados a dicho gran_premio.
 Cada vez que un caballo corre va a avanzar (velocidad+experiencia-edad+aleatorio(1-50)), gana el caballo que una vez llegados
-a la distanacia establecida tenga mayor distancia recorrida y no puede haber empate.
+a la distancia establecida tenga mayor distancia recorrida y no puede haber empate.
 
-Al terminar la carrera los apostantes que hayan acertado se les incrementa el saldo de su cuenta con la cantidad apostadaxvalor_apuesta
+Al terminar la carrera los apostantes que hayan acertado se les incrementa el saldo de su cuenta con la cantidad apostada x valor_apuesta
 A todos los caballos se le incrementa la experiencia en 1 y el caballo que haya ganado se le incrementa la experiencia en 5
 
 Mostrar resumen de cada apostante con su saldo
