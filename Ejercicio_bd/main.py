@@ -1,4 +1,4 @@
-from utils.conexiones import get_mysql_conection
+from Ejercicio_bd.utils.conexiones import get_mysql_conection
 
 try:
     conexion = get_mysql_conection()
@@ -19,11 +19,11 @@ try:
                 print(registro)
 
             #Actualizo los email
-            sentencia = "UPDATE personas SET email = CONCAT(left('personas', 'email', locate('@', 'personas', 'email') -1), '%gmail.com')" \ 
+            """sentencia = "UPDATE personas SET email = CONCAT(left('personas', 'email', locate('@', 'personas', 'email') -1), '%gmail.com')" \ 
                         "WHERE 'personas', 'email' NOT LIKE '%gmail.com'"
             cursor.execute(sentencia)
 
-            conexion.commit()
+            conexion.commit()"""
 except Exception as e:
     print(f'Ocurrió un error: {e}')
 

@@ -1,0 +1,34 @@
+TABLA GRAN PREMIO ---------------------
+
+CREATE TABLE `curso_python`.`gran_premio` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  `distancia` INT NULL,
+  `num_carreras` INT NULL,
+  PRIMARY KEY (`id`));
+
+TABLA CABALLOS -----------------------
+
+CREATE TABLE `curso_python`.`caballos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  `fecha_nacimiento` DATETIME NULL,
+  `velocidad` INT NULL,
+  `experiencia` INT NULL,
+  `valor_apuesta` INT NULL,
+  `id_gran_premio` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `id_gran_premio_idx` (`id_gran_premio` ASC) VISIBLE,
+  CONSTRAINT `id_gran_premio`
+    FOREIGN KEY (`id_gran_premio`)
+    REFERENCES `curso_python`.`gran_premio` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+TABLA APOSTANTES ----------------------
+
+CREATE TABLE `curso_python`.`apostantes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NULL,
+  `saldo` INT NULL,
+  PRIMARY KEY (`id`));
