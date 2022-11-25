@@ -14,7 +14,7 @@ class Apostantes_Dao:
 
     @classmethod
     def seleccionar(cls):
-        with get_mysql_conection as conexion:
+        with get_mysql_conection() as conexion:
             with conexion.cursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
                 registros = cursor.fetchall()
@@ -27,8 +27,8 @@ class Apostantes_Dao:
 
     @classmethod
     def insertar(cls, apostantes):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (apostantes.id, apostantes.nombre, apostantes.saldo)
                 cursor.execute(cls._INSERTAR, valores)
                 log.debug(f'Apostante insertado: {apostantes}')
@@ -36,8 +36,8 @@ class Apostantes_Dao:
 
     @classmethod
     def actualizar(cls, apostantes):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (apostantes.id, apostantes.nombre, apostantes.saldo)
                 cursor.execute(cls._ACTUALIZAR, valores)
                 log.debug(f'Apostante actualizado: {apostantes}')
@@ -45,8 +45,8 @@ class Apostantes_Dao:
 
     @classmethod
     def eliminar(cls, apostantes):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 cursor.execute(cls._ELIMINAR, apostantes.id)
                 log.debug(f'Apostante eliminado: {apostantes}')
                 return cursor.rowcount

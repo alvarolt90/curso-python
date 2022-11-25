@@ -14,7 +14,7 @@ class Gran_Premio_Dao:
 
     @classmethod
     def seleccionar(cls):
-        with get_mysql_conection as conexion:
+        with get_mysql_conection() as conexion:
             with conexion.cursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
                 registros = cursor.fetchall()
@@ -27,8 +27,8 @@ class Gran_Premio_Dao:
 
     @classmethod
     def insertar(cls, gran_premio):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (gran_premio.id, gran_premio.nombre, gran_premio.distancia, gran_premio.num_carreras)
                 cursor.execute(cls._INSERTAR, valores)
                 log.debug(f'Gran Premio insertado: {gran_premio}')
@@ -36,8 +36,8 @@ class Gran_Premio_Dao:
 
     @classmethod
     def actualizar(cls, gran_premio):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (gran_premio.id, gran_premio.nombre, gran_premio.distancia, gran_premio.num_carreras)
                 cursor.execute(cls._ACTUALIZAR, valores)
                 log.debug(f'Gran Premio actualizado: {gran_premio}')
@@ -45,8 +45,8 @@ class Gran_Premio_Dao:
 
     @classmethod
     def eliminar(cls, gran_premio):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 cursor.execute(cls._ELIMINAR, gran_premio.id)
                 log.debug(f'Gran Premio eliminado: {gran_premio}')
                 return cursor.rowcount

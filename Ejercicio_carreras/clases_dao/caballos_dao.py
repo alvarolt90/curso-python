@@ -14,7 +14,7 @@ class Caballos_Dao:
 
     @classmethod
     def seleccionar(cls):
-        with get_mysql_conection as conexion:
+        with get_mysql_conection() as conexion:
             with conexion.cursor() as cursor:
                 cursor.execute(cls._SELECCIONAR)
                 registros = cursor.fetchall()
@@ -27,8 +27,8 @@ class Caballos_Dao:
 
     @classmethod
     def insertar(cls, caballos):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (caballos.id, caballos.nombre, caballos.fecha_nacimiento, caballos.velocidad, caballos.experiencia, caballos.valor_apuesta, caballos.id_gran_premio)
                 cursor.execute(cls._INSERTAR, valores)
                 log.debug(f'Caballo insertado insertado: {caballos}')
@@ -36,8 +36,8 @@ class Caballos_Dao:
 
     @classmethod
     def actualizar(cls, caballos):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 valores = (caballos.id, caballos.nombre, caballos.fecha_nacimiento, caballos.velocidad, caballos.experiencia, caballos.valor_apuesta, caballos.id_gran_premio)
                 cursor.execute(cls._ACTUALIZAR, valores)
                 log.debug(f'Caballo actualizado: {caballos}')
@@ -45,8 +45,8 @@ class Caballos_Dao:
 
     @classmethod
     def eliminar(cls, caballos):
-        with get_mysql_conection as conexion:
-            with conexion.cursor as cursor:
+        with get_mysql_conection() as conexion:
+            with conexion.cursor() as cursor:
                 cursor.execute(cls._ELIMINAR, caballos.id)
                 log.debug(f'Caballo eliminado: {caballos}')
                 return cursor.rowcount
