@@ -15,13 +15,12 @@ if __name__ == "__main__":
     #Leo archivo caballos
     caballo = []
     log.debug("Empezando a leer el archivo")
-    with open('../ficheros/caballos.txt', 'r', encoding='utf8') as archivo:
+    with open('ficheros/caballos.txt', 'r', encoding='utf8') as archivo:
         for linea in archivo:
             log.debug(linea)
             datos = linea.split(SEPARADOR_DATOS)
             log.debug(datos)
             #Creo objeto de cada Caballo
-            caballo = cab.Caballos(datos[ID], datos[NOMBRE], datos[FECHA_NACIMIENTO],
-                            datos[VELOCIDAD], datos[EXPERIENCIA], datos[VALOR_APUESTA], datos[ID_GRAN_PREMIO].split(SEPARADOR_DATOS))
+            caballo = cab.Caballos(datos[ID], datos[NOMBRE], datos[FECHA_NACIMIENTO], datos[VELOCIDAD], datos[EXPERIENCIA], datos[VALOR_APUESTA], datos[ID_GRAN_PREMIO])
             #Inserto el Gran Premio en la base de datos usando el método dao
             cabdao.Caballos_Dao.insertar(caballo)

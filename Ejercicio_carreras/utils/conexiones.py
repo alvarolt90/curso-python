@@ -1,7 +1,7 @@
 import sys
 import MySQLdb
 import psycopg2
-import config_basedatos as conf
+import Ejercicio_carreras.utils.config_basedatos as conf
 
 
 def get_mysql_conection():
