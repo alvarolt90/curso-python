@@ -7,13 +7,18 @@ from datetime import datetime
 
 #Método para iniciar una carrera
 def iniciar_carrera():
+    carrera_completada = False
     #Recorriendo los caballos para saber el ganador
-    for caballo in cb.Caballos:
-        edad = cb.Caballos.fecha_nacimiento - datetime.now()
-        #Calculo la distancia recorrida sumando la velocidad, experiencia y metros aleatorios, le resto la edad calculada
-        caballo.dist_recorrida += (cb.Caballos.velocidad+cb.Caballos.experiencia+random.randint(1, 50)-edad)
-        #Añado los caballos participantes
-        cb.Caballos.append(caballo)
+    while carrera_completada == False:
+        for caballo in cb.Caballos:
+            edad = cb.Caballos.fecha_nacimiento - datetime.now()
+            #Calculo la distancia recorrida sumando la velocidad, experiencia y metros aleatorios, le resto la edad calculada
+            caballo.dist_recorrida += (cb.Caballos.velocidad+cb.Caballos.experiencia+random.randint(1, 50)-edad)
+            #Añado los caballos participantes
+            cb.Caballos.append(caballo)
+            #Si la distancia recorrida por el caballo sobrepasa el límite, la carrera se ha completado
+            if caballo.dist_recorrida > 200:
+                carrera_completada = True
 
     #Recorriendo los caballos participantes
     for caballo in cb.Caballos:
