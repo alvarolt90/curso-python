@@ -12,7 +12,7 @@ CREATE TABLE `curso_python`.`gran_premio` (
 CREATE TABLE `curso_python`.`caballos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
-  `fecha_nacimiento` DATETIME NULL,
+  `fecha_nacimiento` DATE NULL,
   `velocidad` INT NULL,
   `experiencia` INT NULL,
   `valor_apuesta` INT NULL,
@@ -22,8 +22,8 @@ CREATE TABLE `curso_python`.`caballos` (
   CONSTRAINT `id_gran_premio`
     FOREIGN KEY (`id_gran_premio`)
     REFERENCES `curso_python`.`gran_premio` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
 
 ------------- TABLA APOSTANTES ----------------------
 
